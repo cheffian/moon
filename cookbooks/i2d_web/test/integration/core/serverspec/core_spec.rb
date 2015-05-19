@@ -18,4 +18,10 @@ describe 'i2d_web::core' do
 #    its(:stdout) { should_not contain('Ubuntu') }
 #  end
 
+describe command('curl -s http://localhost') do
+  its(:stdout) { should_not contain('Ubuntu') }
+  its(:stdout) { should contain('Welcome to DevOpsDC') }
 end
+
+end
+
